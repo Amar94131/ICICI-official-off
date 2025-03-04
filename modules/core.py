@@ -26,14 +26,14 @@ async def subscribe(app, message):
       try:
          user = await app.get_chat_member(update_channel, message.from_user.id)
          if user.status == "kicked":
-            await message.reply_text("You are Banned. Contact -- @AJ_PYTHON_15")
+            await message.reply_text("You are Banned. Contact -- @AllCourseADMIN_BOT")
             return 1
       except UserNotParticipant:
         caption = f"Join our channel to use the bot"
         await message.reply_photo(photo="http://envs.sh/ten.jpg",caption=caption, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Join Now...", url=f"{url}")]]))
         return 1
       except Exception:
-         await message.reply_text("Something Went Wrong. Contact us @AJ_PYTHON_15...")
+         await message.reply_text("Something Went Wrong. Contact us @AllCourseADMIN_BOT")
          return 1
 def duration(filename):
     result = subprocess.run(["ffprobe", "-v", "error", "-show_entries",
@@ -199,7 +199,7 @@ async def download_video(url,cmd, name):
 
 
 async def send_doc(bot: Client, m: Message,cc,ka,cc1,prog,count,name):
-    reply = await m.reply_text(f"**𝔘𝔭𝔩𝔬𝔞𝔡𝔦𝔫𝔤** »\n`{name}` \n\n**‡ 𝕮𝖗𝖊𝖆𝖙𝖊𝖉 𝕭𝖞: 𝗔𝗝 𝗣𝗬𝗧𝗛𝗢𝗡 💀 ‡**")
+    reply = await m.reply_text(f"**uploading** »\n`{name}` \n\n**created by: @AllCourseADMIN_BOT 💀 ‡**")
     time.sleep(1)
     start_time = time.time()
     await m.reply_document(ka,caption=cc1)
@@ -213,7 +213,7 @@ async def send_doc(bot: Client, m: Message,cc,ka,cc1,prog,count,name):
 async def send_vid(bot: Client, m: Message,cc,filename,thumb,name,prog):
     subprocess.run(f'ffmpeg -i "{filename}" -ss 00:01:00 -vframes 1 "{filename}.jpg"', shell=True)
     await prog.delete (True)
-    reply = await m.reply_text(f"**𝔘𝔭𝔩𝔬𝔞𝔡𝔦𝔫𝔤** 🚀\n`{name}` \n\n**‡ 𝕮𝖗𝖊𝖆𝖙𝖊𝖉 𝕭𝖞: 𝗔𝗝 𝗣𝗬𝗧𝗛𝗢𝗡 💀 ‡**")
+    reply = await m.reply_text(f"**𝔘𝔭𝔩𝔬𝔞𝔡𝔦𝔫𝔤** 🚀\n`{name}` \n\n**created by: @AllCourseADMIN_BOT**")
     try:
         if thumb == "no":
             thumbnail = f"{filename}.jpg"

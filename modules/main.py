@@ -33,16 +33,16 @@ bot = Client(
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(
-       f"**𝗗𝗲𝗮𝗿 𝗠𝗲𝗺𝗯𝗲𝗿𝘀,**\n\n**𝘔𝘺𝘴𝘦𝘭𝘧 𝘢 𝘛𝘟𝘛 𝘋𝘖𝘞𝘕𝘓𝘖𝘈𝘋𝘌𝘙 𝘉𝘖𝘛.**\n**To Extract .txt File /ajpython.**\n**To Stop /cancel.**\n\n‡ 𝕮𝖗𝖊𝖆𝖙𝖊𝖉 𝕭𝖞: 𝗔𝗝 𝗣𝗬𝗧𝗛𝗢𝗡 💀 ‡", reply_markup=InlineKeyboardMarkup(
+       f"**𝗗𝗲𝗮𝗿 𝗠𝗲𝗺𝗯𝗲𝗿𝘀,**\n\n**𝘔𝘺𝘴𝘦𝘭𝘧 𝘢 𝘛𝘟𝘛 𝘋𝘖𝘞𝘕𝘓𝘖𝘈𝘋𝘌𝘙 𝘉𝘖𝘛.**\n**To Extract .txt File /agriculture **\n**To Stop /cancel **\n\n created by: @AllCourseADMIN_BOT", reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("𝕺𝖋𝖋𝖎𝖈𝖎𝖆𝖑 𝕮𝖍𝖆𝖓𝖓𝖊𝖑 " ,url=f"") ],
+                    InlineKeyboardButton("official channel" ,url=f"") ],
                     [
-                    InlineKeyboardButton("𝔒𝔴𝔫𝔢𝔯:𝗣𝗬𝗧𝗛𝗢𝗡 💀" ,url="") ],
+                    InlineKeyboardButton("owner" ,url="") ],
                     [
-                    InlineKeyboardButton("𝕿𝖌_𝕺𝖋𝖋𝖎𝖈𝖎𝖆𝖑" ,url="") ],
+                    InlineKeyboardButton("course update" ,url="") ],
                     [
-                    InlineKeyboardButton("𝔉𝔬𝔩𝔩𝔬𝔴 𝔐𝔢" ,url="") ]
+                    InlineKeyboardButton("deal channel" ,url="") ]
             ]))
 
 @bot.on_message(filters.command("cancel"))
@@ -52,9 +52,9 @@ async def restart_handler(_, m):
 
 
 
-@bot.on_message(filters.command(["ajpython"]))
+@bot.on_message(filters.command(["agriculture"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text('**۞ 𝐓𝐗𝐓 𝐅𝐈𝐋𝐄 𝐁𝐇𝐄𝐉𝐈𝐘𝐄 𝐒𝐈𝐑\n‡ 𝕮𝖗𝖊𝖆𝖙𝖊𝖉 𝕭𝖞: 𝗣𝗬𝗧𝗛𝗢𝗡 💀 ‡**')
+    editable = await m.reply_text('**۞ 𝐓𝐗𝐓 𝐅𝐈𝐋𝐄 𝐁𝐇𝐄𝐉𝐈𝐘𝐄 𝐒𝐈𝐑\n created by: @AllCourseADMIN_BOT**')
     input: Message = await bot.listen(editable.chat.id)
     
     if input.document:
@@ -136,7 +136,7 @@ async def account_login(bot: Client, m: Message):
     else:
         MR = raw_text3
    
-    await editable.edit("𝐒𝐞𝐧𝐝 𝐌𝐞 𝐓𝐡𝐮𝐦𝐛𝐧𝐚𝐢𝐥 𝐔𝐑𝐋:**\nEg : https://envs.sh/az_.jpg")
+    await editable.edit("𝐒𝐞𝐧𝐝 𝐌𝐞 no  𝐓𝐡𝐮𝐦𝐛𝐧𝐚𝐢𝐥 𝐔𝐑𝐋:**\nEg : https://envs.sh/az_.jpg")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -210,7 +210,7 @@ async def account_login(bot: Client, m: Message):
                 url = url.replace(" ","%20")
 
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
-            name = f'{str(count).zfill(3)})  𝗔𝗝 𝗣𝗬𝗧𝗛𝗢𝗡~{name1[:60]}'
+            name = f'{str(count).zfill(3)})  @AllCourseADMIN_BOT~{name1[:60]}'
 
             if "embed" in url:
                 ytf = f"bestvideo[height<={raw_text2}]+bestaudio/best[height<={raw_text2}]"
@@ -234,8 +234,8 @@ async def account_login(bot: Client, m: Message):
         
             try:  
                 
-                cc = f'**[📹] ᐯIᗪ_Iᗪ ⇛** {str(count).zfill(3)}.**\n**𝐕𝐢𝐝𝐞𝐨 𝐃𝐞𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧 ⇛** {name1} {res} 𝑼𝑪𝑯𝑰𝑯𝑨 𝑶𝑩𝑰𝑻𝑶.mkv\n\nвαт¢н ηαмє ⇛ **{raw_text0}**\n\n‡ υ℘ᥣᨵɑժꫀժ ßꪗ: {MR}‡\n\n'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-                cc1 = f'**[📁]  ᖴIᒪE_Iᗪ ⇛** {str(count).zfill(3)}.\n**𝐅𝐢𝐥𝐞 𝐃𝐞𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧 ⇛** {name1} 𝑼𝑪𝑯𝑰𝑯𝑨 𝑶𝑩𝑰𝑻𝑶.pdf\n\nвαт¢н ηαмє ⇛ **{raw_text0}**\n\n‡ υ℘ᥣᨵɑժꫀժ ßꪗ: {MR}‡\n\n'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                cc = f'**[📹] ᐯIᗪ_Iᗪ ⇛** {str(count).zfill(3)}.**\n**𝐕𝐢𝐝𝐞𝐨 𝐃𝐞𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧 ⇛** {name1} {res} .mkv\n\nвαт¢н ηαмє ⇛ **{raw_text0}**\n\n uploaded by: {MR}‡\n\n'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                cc1 = f'**[📁]  ᖴIᒪE_Iᗪ ⇛** {str(count).zfill(3)}.\n**𝐅𝐢𝐥𝐞 𝐃𝐞𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧 ⇛** {name1} .pdf\n\nвαт¢н ηαмє ⇛ **{raw_text0}**\n\n uploaded by: {MR}‡\n\n'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -261,7 +261,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**ＫＡＭＵＩ**\n\n➢ **𝐍𝐚𝐦𝐞 »** `{name}\n➢ 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 » {raw_text2}`\n\n➢ 𝐕𝐢𝐝𝐞𝐨 𝐔𝐑𝐋 » **𝐓𝐇𝐄𝐘 𝐃𝐎𝐍'𝐓 𝐔𝐍𝐃𝐄𝐑𝐒𝐓𝐀𝐍𝐃 𝐇𝐎𝐖 𝐌𝐔𝐂𝐇 𝐏𝐀𝐈𝐍 𝐈𝐓 𝐓𝐀𝐊𝐄𝐒 𝐓𝐎 𝐁𝐄 𝐓𝐇𝐈𝐒 𝐆𝐄𝐍𝐓𝐋𝐄.**\n\n‡ 𝕮𝖗𝖊𝖆𝖙𝖊𝖉 𝕭𝖞: 𝗔𝗝 𝗣𝗬𝗧𝗛𝗢𝗡 💀 ‡\n"
+                    Show = f"**ＫＡＭＵＩ**\n\n➢ **𝐍𝐚𝐦𝐞 »** `{name}\n➢ 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 » {raw_text2}`\n\n➢ 𝐕𝐢𝐝𝐞𝐨 𝐔𝐑𝐋 » **𝐓𝐇𝐄𝐘 𝐃𝐎𝐍'𝐓 𝐔𝐍𝐃𝐄𝐑𝐒𝐓𝐀𝐍𝐃 𝐇𝐎𝐖 𝐌𝐔𝐂𝐇 𝐏𝐀𝐈𝐍 𝐈𝐓 𝐓𝐀𝐊𝐄𝐒 𝐓𝐎 𝐁𝐄 𝐓𝐇𝐈𝐒 𝐆𝐄𝐍𝐓𝐋𝐄.**\n\n created by: @AllCourseADMIN_BOT\n"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -272,13 +272,13 @@ async def account_login(bot: Client, m: Message):
 
             except Exception as e:
                 await m.reply_text(
-                    f"**Ξ 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐈𝐍𝐆 𝐄𝐑𝐑𝐎𝐑 Ξ**\n{str(e)}\n➢ **𝐍𝐚𝐦𝐞** » {name}\n➢ **𝐋𝐢𝐧𝐤** » **Malik Smjh Jayenge**"
+                    f"**Ξ 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐈𝐍𝐆 𝐄𝐑𝐑𝐎𝐑 Ξ**\n{str(e)}\n➢ **𝐍𝐚𝐦𝐞** » {name}\n➢ **𝐋𝐢𝐧𝐤** » **link error **"
                 )
                 continue
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("**۞ 𝙰𝚁𝙸𝙶𝙰𝚃𝙾 ۞\n𝐈'𝐌 𝐃𝐎𝐍𝐄.☺**")
+    await m.reply_text("**۞ @AllCourseADMIN_BOT ۞\n𝐈'𝐌 𝐃𝐎𝐍𝐄.☺**")
 
 
 bot.run()
