@@ -56,33 +56,39 @@ async def restart_handler(_, m):
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('**۞ 𝐓𝐗𝐓 𝐅𝐈𝐋𝐄 𝐁𝐇𝐄𝐉𝐈𝐘𝐄 𝐒𝐈𝐑\n‡ 𝕮𝖗𝖊𝖆𝖙𝖊𝖉 𝕭𝖞: 𝗣𝗬𝗧𝗛𝗢𝗡 💀 ‡**')
     input: Message = await bot.listen(editable.chat.id)
+    
     if input.document:
         x = await input.download()
-    if x is None: 
-        await message.reply("File path missing or not assigned.")
+    else:
+        await m.reply("File path missing or not assigned.")
         return
-        await bot.send_document(chat_id=message.chat.id, document=x)
-        await input.delete(True)    
-        file_name, ext = os.path.splitext(os.path.basename(x))
-
-
-        path = f"./downloads/{m.chat.id}"
-    if x is None: 
-        await message.reply("File path missing or not assigned.")
+    
+    if x is None:
+        await m.reply("File path missing or not assigned.")
         return
+    
+    await bot.send_document(chat_id=m.chat.id, document=x)
+    await input.delete(True)    
+
+    file_name, ext = os.path.splitext(os.path.basename(x))
+    path = f"./downloads/{m.chat.id}"
+    
     try:
-       with open(x, "r") as f:
-           content = f.read()
-       content = content.split("\n")
-       links = []
-       for i in content:
-           links.append(i.split("://", 1))
-       os.remove(x)
-            # print(len(links)
+        with open(x, "r") as f:
+            content = f.read()
+        
+        content = content.split("\n")
+        links = []
+
+        for i in content:
+            if "://" in i:
+                links.append(i.split("://", 1))
+        
+        os.remove(x)  # File delete krne ka code
     except:
-           await m.reply_text("**𝓜𝓪𝔃𝓪𝓴 𝓶𝓽 𝓚𝓻.**")
-           os.remove(x)
-           return
+        await m.reply_text("**𝓜𝓪𝔃𝓪𝓴 𝓶𝓽 𝓚𝓻.**")
+        os.remove(x)
+        return
     
    
     await editable.edit(f"**۞ 𝐓𝐨𝐭𝐚𝐥 𝐋𝐢𝐧𝐤𝐬 𝐅𝐨𝐮𝐧𝐝 𝐚𝐫𝐞: ** **{len(links)}**\n\n**𝐒𝐞𝐧𝐝 𝐈𝐧𝐝𝐞𝐱 𝐍𝐮𝐦𝐛𝐞𝐫 𝐅𝐫𝐨𝐦 𝐰𝐡𝐞𝐫𝐞 𝐲𝐨𝐮 𝐬𝐭𝐚𝐫𝐭:** **1**")
