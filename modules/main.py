@@ -60,7 +60,7 @@ async def account_login(bot: Client, m: Message):
         x = await input.download()
     if x is None: 
         await message.reply("File path missing or not assigned.")
-          return
+        return
         await bot.send_document(chat_id=message.chat.id, document=x)
         await input.delete(True)    
         file_name, ext = os.path.splitext(os.path.basename(x))
@@ -69,7 +69,7 @@ async def account_login(bot: Client, m: Message):
         path = f"./downloads/{m.chat.id}"
     if x is None: 
         await message.reply("File path missing or not assigned.")
-          return
+        return
     try:
        with open(x, "r") as f:
            content = f.read()
