@@ -36,13 +36,13 @@ async def account_login(bot: Client, m: Message):
        f"**𝗗𝗲𝗮𝗿 𝗠𝗲𝗺𝗯𝗲𝗿𝘀,**\n\n**𝘔𝘺𝘴𝘦𝘭𝘧 𝘢 𝘛𝘟𝘛 𝘋𝘖𝘞𝘕𝘓𝘖𝘈𝘋𝘌𝘙 𝘉𝘖𝘛.**\n**To Extract .txt File /agriculture **\n**To Stop /cancel **\n\n created by: @AllCourseADMIN_BOT", reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("official channel" ,url=f"") ],
+                    InlineKeyboardButton("official channel" ,url="https://t.me/+OprOK_dzoag4M2Fl") ],
                     [
-                    InlineKeyboardButton("owner" ,url="") ],
+                    InlineKeyboardButton("owner" ,url="https://t.me/AllCourseADMIN_BOT") ],
                     [
-                    InlineKeyboardButton("course update" ,url="") ],
+                    InlineKeyboardButton("course update" ,url="https://t.me/+OprOK_dzoag4M2Fl") ],
                     [
-                    InlineKeyboardButton("deal channel" ,url="") ]
+                    InlineKeyboardButton("deal channel" ,url="https://t.me/+IVcD0g1xRyhmNjhl") ]
             ]))
 
 @bot.on_message(filters.command("cancel"))
@@ -209,7 +209,7 @@ async def account_login(bot: Client, m: Message):
             elif ".pdf" in url:
                 url = url.replace(" ","%20")
 
-            name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
+            name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("<", "").replace(">", "").strip()
             name = f'{str(count).zfill(3)}~{name1[:60]}'
 
             if "embed" in url:
